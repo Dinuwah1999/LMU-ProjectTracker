@@ -1,0 +1,7 @@
+Component,Minimum Requirement,Your System,Status
+CPU,Dual-core 2GHz+,"AMD Ryzen 3 3300U (4 cores, 2.10 GHz)",PASS
+RAM,8GB,16GB (13.9 GB usable),PASS
+Storage,40GB free space,Check available space,Check needed
+Operating System,Windows 10/11 or Linux,Windows 10 Enterprise,PASS
+Network,100Mbps+,Check connection speed,Check needed
+Virtualization,AMD-V/VT-x support,AMD-V supported,PASS

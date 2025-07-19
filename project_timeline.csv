@@ -1,0 +1,9 @@
+Week,Phase,Key Tasks,Expected Outputs
+1,Setup,"Install GNS3, Docker, WSL2",Working environment
+2,Setup,"Create initial GNS3 topology, AWS account setup",Basic network topology
+3,Configuration,"Configure VLANs, routing in GNS3",Functioning internal network
+4,Configuration,"Set up AWS VPC, EC2, OpenVPN server",Working hybrid connectivity
+5,Security,"Implement ACLs, security groups",Network segmentation
+6,Security,"Linux hardening, security testing",Secured systems
+7,Monitoring,"ELK Stack, Grafana/Prometheus setup",Monitoring dashboards
+8,Monitoring,"Security assessment, documentation",Complete project documentation

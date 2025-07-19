@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNS3-AWS Hybrid Network Implementation Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Automation-Driven Hybrid Enterprise Network</h1>
+            <p class="subtitle">GNS3 + AWS Free Tier Implementation</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <span class="progress-text" id="progressText">0% Complete</span>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="overview">Overview</button>
+            <button class="nav-tab" data-tab="phases">Implementation</button>
+            <button class="nav-tab" data-tab="resources">Resources</button>
+            <button class="nav-tab" data-tab="monitor">Dashboard</button>
+        </nav>
+
+        <!-- Overview Tab -->
+        <div class="tab-content active" id="overview">
+            <div class="card">
+                <div class="card__body">
+                    <h2>Project Overview</h2>
+                    <p>Design, automate, and evaluate a secure hybrid network using GNS3 and AWS Free Tier with comprehensive monitoring and security controls.</p>
+                    
+                    <div class="architecture-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1749489245/gpt4o_images/pcsilheguno693isze0y.png" alt="GNS3-AWS Hybrid Network Architecture" class="responsive-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <h3>Hardware Compatibility Check</h3>
+                    <div class="compatibility-grid">
+                        <div class="compat-item">
+                            <span class="compat-label">CPU:</span>
+                            <span class="compat-value">AMD Ryzen 3 3300U (4 cores, 2.10 GHz)</span>
+                            <span class="status status--success">✓ Compatible</span>
+                        </div>
+                        <div class="compat-item">
+                            <span class="compat-label">RAM:</span>
+                            <span class="compat-value">16GB (13.9 GB usable)</span>
+                            <span class="status status--success">✓ Sufficient</span>
+                        </div>
+                        <div class="compat-item">
+                            <span class="compat-label">OS:</span>
+                            <span class="compat-value">Windows 10 Enterprise</span>
+                            <span class="status status--success">✓ Supported</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <h3>AWS Free Tier Limitations</h3>
+                    <div class="aws-limits">
+                        <div class="limit-item">
+                            <span class="limit-service">EC2:</span>
+                            <span class="limit-quota">750 hours/month t2.micro (12 months)</span>
+                        </div>
+                        <div class="limit-item">
+                            <span class="limit-service">Storage:</span>
+                            <span class="limit-quota">30 GB EBS (12 months)</span>
+                        </div>
+                        <div class="limit-item">
+                            <span class="limit-service">Data Transfer:</span>
+                            <span class="limit-quota">100 GB out/month (12 months)</span>
+                        </div>
+                    </div>
+                    <div class="warnings">
+                        <h4>⚠️ Important Warnings:</h4>
+                        <ul>
+                            <li>Stay within 750 hours per month for EC2</li>
+                            <li>Monitor data transfer usage</li>
+                            <li>Set up billing alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-image">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1749489302/gpt4o_images/hnubgxghrfgyr6fdus45.png" alt="8-Week Implementation Timeline" class="responsive-image">
+            </div>
+        </div>
+
+        <!-- Phases Tab -->
+        <div class="tab-content" id="phases">
+            <div class="phases-container">
+                <div class="phase-card" data-phase="1">
+                    <div class="phase-header">
+                        <h3>Phase 1: Environment Setup</h3>
+                        <span class="phase-weeks">Weeks 1-2</span>
+                        <button class="toggle-btn">▼</button>
+                    </div>
+                    <div class="phase-content">
+                        <p>Install and configure all required software and tools</p>
+                        <div class="week-tasks">
+                            <div class="week">
+                                <h4>Week 1: Basic Setup</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Install WSL2 and Ubuntu</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Install Docker Desktop</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Install GNS3</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure GNS3 with Docker</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Install Ansible in WSL2</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up GitHub repository</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="week">
+                                <h4>Week 2: Initial Topology</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Create basic GNS3 topology</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up AWS account and CLI</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Create Ansible inventory</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Test basic connectivity</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-card" data-phase="2">
+                    <div class="phase-header">
+                        <h3>Phase 2: Network Configuration</h3>
+                        <span class="phase-weeks">Weeks 3-4</span>
+                        <button class="toggle-btn">▼</button>
+                    </div>
+                    <div class="phase-content">
+                        <p>Configure VLANs, routing, and AWS infrastructure</p>
+                        <div class="week-tasks">
+                            <div class="week">
+                                <h4>Week 3: GNS3 Configuration</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure 5 VLANs in GNS3</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up inter-VLAN routing</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure Docker containers as hosts</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Test internal connectivity</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="week">
+                                <h4>Week 4: AWS Setup</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Create AWS VPC and subnet</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Launch EC2 instance</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Install OpenVPN server</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure VPN connectivity</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-card" data-phase="3">
+                    <div class="phase-header">
+                        <h3>Phase 3: Security Implementation</h3>
+                        <span class="phase-weeks">Weeks 5-6</span>
+                        <button class="toggle-btn">▼</button>
+                    </div>
+                    <div class="phase-content">
+                        <p>Implement security controls and hardening</p>
+                        <div class="week-tasks">
+                            <div class="week">
+                                <h4>Week 5: Network Security</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Implement ACLs in GNS3</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure AWS Security Groups</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up IAM policies</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Test security controls</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="week">
+                                <h4>Week 6: Server Hardening</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Harden Linux server</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up security testing tools</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Perform vulnerability scans</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Document security findings</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-card" data-phase="4">
+                    <div class="phase-header">
+                        <h3>Phase 4: Monitoring & Documentation</h3>
+                        <span class="phase-weeks">Weeks 7-8</span>
+                        <button class="toggle-btn">▼</button>
+                    </div>
+                    <div class="phase-content">
+                        <p>Deploy monitoring and complete documentation</p>
+                        <div class="week-tasks">
+                            <div class="week">
+                                <h4>Week 7: Monitoring Setup</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Deploy ELK Stack</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Set up Grafana/Prometheus</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Configure monitoring dashboards</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Test monitoring systems</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="week">
+                                <h4>Week 8: Final Testing</h4>
+                                <div class="task-list">
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Perform final security assessment</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Create comprehensive documentation</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Test all automation scripts</span>
+                                    </label>
+                                    <label class="task-item">
+                                        <input type="checkbox" class="task-checkbox">
+                                        <span>Prepare project presentation</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Tab -->
+        <div class="tab-content" id="resources">
+            <div class="card">
+                <div class="card__body">
+                    <h2>Software Requirements</h2>
+                    <div class="software-grid">
+                        <div class="software-item required">
+                            <span class="software-name">GNS3</span>
+                            <span class="software-version">Latest</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item required">
+                            <span class="software-name">Docker Desktop</span>
+                            <span class="software-version">Latest</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item required">
+                            <span class="software-name">WSL2 Ubuntu</span>
+                            <span class="software-version">20.04+</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item required">
+                            <span class="software-name">Ansible</span>
+                            <span class="software-version">4.0+</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item required">
+                            <span class="software-name">AWS CLI</span>
+                            <span class="software-version">2.0+</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item required">
+                            <span class="software-name">Git</span>
+                            <span class="software-version">Latest</span>
+                            <span class="status status--error">Required</span>
+                        </div>
+                        <div class="software-item recommended">
+                            <span class="software-name">Wireshark</span>
+                            <span class="software-version">Latest</span>
+                            <span class="status status--warning">Recommended</span>
+                        </div>
+                        <div class="software-item recommended">
+                            <span class="software-name">Nmap</span>
+                            <span class="software-version">Latest</span>
+                            <span class="status status--warning">Recommended</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <h2>Configuration Templates</h2>
+                    <div class="config-section">
+                        <h3>Ansible VLAN Configuration</h3>
+                        <pre><code>---
+- name: Configure VLANs
+  hosts: gns3_switches
+  tasks:
+    - name: Create VLANs
+      ios_vlans:
+        config:
+          - name: Management
+            vlan_id: 10
+          - name: Production
+            vlan_id: 20
+          - name: DMZ
+            vlan_id: 30</code></pre>
+                    </div>
+                    <div class="config-section">
+                        <h3>Docker Compose for ELK Stack</h3>
+                        <pre><code>version: '3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+  
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.15.0
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <h2>Quick Reference</h2>
+                    <div class="quick-ref">
+                        <div class="ref-section">
+                            <h4>AWS CLI Commands</h4>
+                            <code>aws configure</code> - Configure AWS credentials<br>
+                            <code>aws ec2 describe-instances</code> - List EC2 instances<br>
+                            <code>aws vpc describe-vpcs</code> - List VPCs
+                        </div>
+                        <div class="ref-section">
+                            <h4>Docker Commands</h4>
+                            <code>docker ps</code> - List running containers<br>
+                            <code>docker-compose up -d</code> - Start services<br>
+                            <code>docker logs [container]</code> - View logs
+                        </div>
+                        <div class="ref-section">
+                            <h4>Ansible Commands</h4>
+                            <code>ansible-playbook site.yml</code> - Run playbook<br>
+                            <code>ansible-inventory --list</code> - List inventory<br>
+                            <code>ansible all -m ping</code> - Test connectivity
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monitor Tab -->
+        <div class="tab-content" id="monitor">
+            <div class="dashboard-grid">
+                <div class="card dashboard-card">
+                    <div class="card__body">
+                        <h3>Project Status</h3>
+                        <div class="status-item">
+                            <span>Overall Progress:</span>
+                            <span id="dashboardProgress">0%</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Current Phase:</span>
+                            <span id="currentPhase">Phase 1: Environment Setup</span>
+                        </div>
+                        <div class="status-item">
+                            <span>Tasks Completed:</span>
+                            <span id="tasksCompleted">0/32</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card">
+                    <div class="card__body">
+                        <h3>Phase Progress</h3>
+                        <div class="phase-progress">
+                            <div class="phase-progress-item">
+                                <span>Phase 1:</span>
+                                <div class="mini-progress">
+                                    <div class="mini-progress-fill" id="phase1Progress"></div>
+                                </div>
+                                <span id="phase1Percent">0%</span>
+                            </div>
+                            <div class="phase-progress-item">
+                                <span>Phase 2:</span>
+                                <div class="mini-progress">
+                                    <div class="mini-progress-fill" id="phase2Progress"></div>
+                                </div>
+                                <span id="phase2Percent">0%</span>
+                            </div>
+                            <div class="phase-progress-item">
+                                <span>Phase 3:</span>
+                                <div class="mini-progress">
+                                    <div class="mini-progress-fill" id="phase3Progress"></div>
+                                </div>
+                                <span id="phase3Percent">0%</span>
+                            </div>
+                            <div class="phase-progress-item">
+                                <span>Phase 4:</span>
+                                <div class="mini-progress">
+                                    <div class="mini-progress-fill" id="phase4Progress"></div>
+                                </div>
+                                <span id="phase4Percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card">
+                    <div class="card__body">
+                        <h3>Network Topology Status</h3>
+                        <div class="topology-status">
+                            <div class="topology-item">
+                                <span>GNS3 Environment:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <div class="topology-item">
+                                <span>AWS Infrastructure:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <div class="topology-item">
+                                <span>VPN Connectivity:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <div class="topology-item">
+                                <span>Security Controls:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card dashboard-card">
+                    <div class="card__body">
+                        <h3>Documentation Progress</h3>
+                        <div class="doc-progress">
+                            <div class="doc-item">
+                                <span>Network Diagrams:</span>
+                                <span class="status status--warning">In Progress</span>
+                            </div>
+                            <div class="doc-item">
+                                <span>Configuration Files:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <div class="doc-item">
+                                <span>Security Assessment:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                            <div class="doc-item">
+                                <span>Final Report:</span>
+                                <span class="status status--warning">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

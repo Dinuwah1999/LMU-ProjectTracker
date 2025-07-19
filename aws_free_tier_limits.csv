@@ -1,0 +1,10 @@
+Service,Free Tier Limit,Duration,Notes
+EC2 (t2.micro/t3.micro),750 hours per month,12 months,Enough for 1 instance 24/7 or multiple instances part-time
+EBS Storage,30 GB,12 months,General Purpose SSD (gp2)
+VPC,Free (unlimited),Always free,"Includes subnets, route tables, etc."
+Security Groups,Free (unlimited),Always free,Security group rules are free
+Data Transfer OUT,100 GB per month,12 months,Internet egress; exceeding costs $0.09/GB
+Data Transfer IN,Free (unlimited),Always free,All inbound data is free
+AMI Storage,5 GB,12 months,For storing custom AMIs
+IAM,Free (unlimited),Always free,"User management, roles, and policies"
+CloudWatch,10 metrics,12 months,Basic monitoring
